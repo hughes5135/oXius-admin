@@ -1,0 +1,31 @@
+{
+  "name": "oxius-admin",
+  "private": true,
+  "packageManager": "pnpm@9.14.2",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "prepare": "husky",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "publish:packages": "pnpm run build && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.10",
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@eslint/js": "^9.15.0",
+    "eslint": "^9.15.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "prettier": "^3.4.2",
+    "turbo": "^2.3.3",
+    "typescript-eslint": "^8.15.0"
+  }
+}
