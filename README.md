@@ -77,13 +77,16 @@ pnpm --filter @oxius-admin/ui storybook
 
 ### 发布前准备
 
-- 在 GitHub 仓库 **Settings → Secrets and variables → Actions** 中配置 **NPM_TOKEN**（npm 账号的 Access Token）。
+- **GitHub Actions**：在仓库 **Settings → Secrets and variables → Actions** 中配置 **NPM_TOKEN**。
+- **阿里云效**：在流水线 **编辑 → 变量和缓存 → 字符变量** 中新建变量 **NPM_TOKEN**（勾选私密模式），详见 [云效发版与 NPM_TOKEN 配置](docs/云效发版与NPM_TOKEN配置.md)。
 - 若包为 **scoped 且公开**，在 `packages/ui/package.json` 中可增加：
   ```json
   "publishConfig": {
     "access": "public"
   }
   ```
+
+发布到 npm 的详细步骤见 [发布到 npm 步骤](docs/发布到npm步骤.md)。
 
 ## 常用命令
 
